@@ -1,0 +1,2 @@
+#除去index.php入口文件后缀
+try_files  $uri  /index.php$uri$is_args$args;
