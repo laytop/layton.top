@@ -1,5 +1,5 @@
 <?php
-namespace app\admin\target;
+namespace app\console\target;
 
 interface menu /*菜单*/
 {
