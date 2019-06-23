@@ -1,7 +1,7 @@
 <?php
 namespace app\index\controller;
 use think\Controller;
-use think\Cache;
+use think\facade\Cache;
 use think\cache\driver\Redis;
 
 class Debug extends Controller
@@ -24,6 +24,14 @@ class Debug extends Controller
 
 //        Cache::store('redis')->set('key1','123456789');
 //        Cache::store('redis')->get('key1');
+    }
+
+
+    public function abc()
+    {
+         Cache::store('redis') -> set('name','laijinquan',3600);
+         $name = Cache::store('redis') -> get('name');
+         dump($name);
     }
 
 }
